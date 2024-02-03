@@ -27,5 +27,4 @@ int main()
     {
         cout<<"Groom is not eligible for marriage";
     }
-
 }
