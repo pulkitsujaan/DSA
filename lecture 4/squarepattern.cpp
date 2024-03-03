@@ -24,4 +24,17 @@ int main()
         }
         cout << endl;
     }
+    int row, col,count;
+    char alpha='A';
+    for (row = 1; row <= n; row++)
+    {
+        
+        for (col = 1;col<=n;col++)
+        {
+            cout <<alpha<<" ";
+            alpha++;
+        }
+        alpha=alpha-2;
+        cout << endl;
+    }
 }

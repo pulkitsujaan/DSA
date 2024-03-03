@@ -4,15 +4,15 @@ using namespace std;
 int main()
 {
     //Array
-    int n;//Gunjan=variable
-    int marks[10];//[]tells that the variable is an array
+    int i,marks[10];//[]tells that the variable is an array
     //Assigning the value to array
-    for(int i=1;i<=marks[10];i++)
+    for(i=1;i<=10;i++)
     {
         cout<<"Enter the marks of Roll.no."<<i<<": ";
         cin>>marks[i];
     }
     cout<<"Enter the roll no. of the student whom marks you want to know: ";
-    cin>>n;
-    cout<<marks[n];
+    cin>>i;
+    cout<<marks[i];
+    return 0;
 }
