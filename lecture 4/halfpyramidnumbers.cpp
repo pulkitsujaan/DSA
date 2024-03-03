@@ -84,23 +84,25 @@ int main()
     for (row = 1; row <= n; row++)
     {
         triangle=1;
-        for (col = 1; col <= (2*n)-1; col++)
+        for (col = 1; col <= 2*n; col++)
         {
-            if(col<=n-1+row&&col>=n+1-row)
+            
+            if(col<=n-1+row&&col>=n+2-row)
             {
-                cout <<triangle;
-                if(triangle<row)
-                {
-                    triangle++;
-                }
-                else if(triangle>=row)
-                {
-                    triangle--;
-                }
+                cout <<"* ";
+                
             }
             else
             {
-                cout<<"  ";
+                cout <<triangle<<" ";
+            }            
+            if(col<n)
+            {
+                triangle++;
+            }
+            else if(col>n)
+            {
+                triangle--;
             }
         }
         cout << endl;
