@@ -1,3 +1,3 @@
 
-        alpha = 'A' + n - row + 1;
-        letter = alpha;
+       // alpha = 'A' + n - row + 1;
+       // letter = alpha;
