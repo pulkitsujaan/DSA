@@ -22,7 +22,8 @@ int main()
     cout << b[0] << endl
          << b[1];
     //Better approach
-    int a[]={3,2,4,1,5},largest,seclargest,smallest;
+    a[]={3,2,4,1,5};
+    int largest,seclargest,smallest;
     for(i=0;i<n;i++)
     {
         if(a[i]>a[i+1]&&i!=n-1)
