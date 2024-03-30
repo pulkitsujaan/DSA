@@ -10,9 +10,7 @@ int main()
         {
             if (a[j] > a[j + 1] && j < n - 1)
             {
-                a[j] = a[j] + a[j + 1];
-                a[j + 1] = a[j] - a[j + 1];
-                a[j] = a[j] - a[j + 1];
+                swap(a[j],a[j+1]);
             }
         }
     }

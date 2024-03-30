@@ -17,9 +17,7 @@ int main()
     for (int j = 0; j < sizeof(nums) / 4; j++){
         for (int i = 0; i < sizeof(nums) / 4; i++){
             if (nums[i] > nums[i + 1] && i < (sizeof(nums) / 4) - 1){
-                nums[i] = nums[i] + nums[i + 1];
-                nums[i + 1] = nums[i] - nums[i + 1];
-                nums[i] = nums[i] - nums[i + 1];
+                swap(nums[i],nums[i+1]);
             }
         }
     }
