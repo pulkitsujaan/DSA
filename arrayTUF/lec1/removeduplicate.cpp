@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int a[]={1,1,2,2,3,3,4},n=7,b[4];
+    int a[]={1,2,2,3,3,4},n=7,b[4];
     b[0]=a[0];
     for(int i=1,j=1;i<n;i++)
     {
