@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
     int a[] = {1, 2, 2, 3, 4, 5}, b[] = {2, 3, 3, 5, 6, 6}, n, i, j;
