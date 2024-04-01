@@ -1,33 +1,37 @@
 #include <iostream>
 using namespace std;
-int removeduplicate(int a[]){
-    int n=sizeof(a)/4;
-    for(int i=1,j=0;i<n;i++,j++){
-        if(a[i]!=a[i-1]){
-            a[j]=a[i];
-        }
-    }
-}
+
 int main()
 {
-    int a[]={1,2,2,3,5},b[]={2,3,3,5,6,6},n,i,j;
-    if(sizeof(a)>=sizeof(b))
+    int a[] = {1, 2, 2, 3, 4, 5}, b[] = {2, 3, 3, 5, 6, 6}, n, i, j;
+    int u[sizeof(a) + sizeof(b)];
+    for (int i = 0, j = 0, k = 0; i < n; i++)
     {
-        n=sizeof(a)/4;
+        for(;a[j] == a[j + 1];)
+        {
+            j++;
+        }
+        for (;b[k] == b[k + 1];)
+        {
+            k++;
+        }
+        if (a[j] < b[k])
+        {
+            u[i] = a[j];
+            j++;
+        }
+        else if (a[j] > b[k])
+        {
+            u[i] = b[k];
+            k++;
+            continue;
+        }
+        else if (a[j] == b[k])
+        {
+            u[i] = a[j];
+            j++;
+            k++;
+        }
     }
-    else 
-    {
-        n=sizeof(b);
-    }
-    removeduplicate(a);
-    removeduplicate(b);
-    int U[sizeof(a)+sizeof(b)];
-    for(i=0,j=0;j<sizeof(a)/4;i++,j++){
-        U[i]=a[j];
-    }
-    for(int j=0,i;j<sizeof(b)/4;i++,j++){
-        U[i]=b[j];
-    }
-    removeduplicate(U);
-    cout<<U[0]<<U[1]<<U[2]<<U[3]<<U[4]<<U[5];
+    cout << u[0] << u[1] << u[2] << u[3] << u[4] << u[5]; 
 }
