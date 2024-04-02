@@ -2,10 +2,6 @@
 using namespace std;
 int main()
 {
-<<<<<<< HEAD
-
-}
-=======
     int a[] = {1, 2, 2, 3, 4, 5}, b[] = {2, 3, 3, 5, 6, 6}, n, i, j;
     int u[sizeof(a) + sizeof(b)];
     n= sizeof(a) + sizeof(b);
@@ -37,4 +33,3 @@ int main()
     }
     cout << u[0] << u[1] << u[2] ;
 }
->>>>>>> 6b4d56932c555664eb223ee509f2e540213bd733
