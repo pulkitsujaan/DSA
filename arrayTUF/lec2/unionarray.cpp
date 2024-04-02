@@ -4,6 +4,7 @@ int main()
 {
     int a[] = {1, 2, 2, 3, 4, 5}, b[] = {2, 3, 3, 5, 6, 6}, n, i, j;
     int u[sizeof(a) + sizeof(b)];
+    n= sizeof(a) + sizeof(b);
     for (int i = 0, j = 0, k = 0; i < n; i++)
     {
         for(;a[j] == a[j + 1];)
