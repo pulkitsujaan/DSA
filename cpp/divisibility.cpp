@@ -1,30 +1,30 @@
-
 #include <iostream>
 using namespace std;
-class divisibility{
-    public:
+class divisibility
+{
+public:
     int n;
-  //  void enternumber ();
-   bool checkDivisibility ();
-    
-}hello;
-/*void divisibility :: enternumber (){
-    cout<<"enter a number"<<endl;
-    cin>>n;
-}*/
-bool divisibility :: checkDivisibility(void){
-    cout<<"enter a number"<<endl;
-    cin>>n;
-if((n%4==0&&n%100!=0)||n%400==0){
-    cout<< true;}
-
-else cout<< false;
-
+    void enternumber();
+    bool checkDivisibility();
+};
+void divisibility ::enternumber(void)
+{
+    cout << "Enter a number: ";
+    cin >> n;
 }
-int main() {
-   
-    
-    
+bool divisibility ::checkDivisibility(void)
+{
+    if ((n % 4 == 0 && n % 100 != 0) || n % 400 == 0)
+    {
+        cout << true;
+    }
+    else
+        cout << false;
+}
+int main()
+{
+    divisibility hello;
+    hello.enternumber();
     hello.checkDivisibility();
     return 0;
 }
