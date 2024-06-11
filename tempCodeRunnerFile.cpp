@@ -5,7 +5,6 @@ class Employee
 {
     int id;
     int count;
-
 public:
     void setData(void)
     {
