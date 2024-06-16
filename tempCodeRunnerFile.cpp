@@ -4,27 +4,27 @@ using namespace std;
 class Employee
 {
     int id;
-    int count;
+    int hello =0;
 public:
     void setData(void)
     {
         cout << "Enter the id" << endl;
         cin >> id;
-        count++;
+        hello++;
     }
     void getData(void)
     {
-        cout << "The id of this employee is " << id << " and this is employee number " << count << endl;
+        cout << "The id of this employee is " << id << " and this is employee number " << hello << endl;
     }
 
     void getCount(void){
         // cout<<id; // throws an error
-        cout<<"The value of count is "<<count<<endl;
+        cout<<"The value of count is "<<hello<<endl;
     }
 };
 
 // Count is the static data member of class Employee
- // Default value is 0
+//int Employee::count; // Default value is 0
 
 int main()
 {
@@ -40,6 +40,7 @@ int main()
 
     lovish.setData();
     lovish.getData();
+    
 
     return 0;
 }
