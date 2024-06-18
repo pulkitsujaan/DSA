@@ -1,46 +1,52 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class Employee
-{
-    int id;
-    int hello =0;
-public:
-    void setData(void)
-    {
-        cout << "Enter the id" << endl;
-        cin >> id;
-        hello++;
-    }
-    void getData(void)
-    {
-        cout << "The id of this employee is " << id << " and this is employee number " << hello << endl;
-    }
+// 1 + 4i
+// 5 + 8i
+// -------
+// 6 + 12i 
+class Complex{
+    int a, b;
+    friend Complex sumComplex(Complex o1, Complex o2);
+    public:
+        void setNumber(int n1, int n2){
+            a = n1;
+            b = n2;
+        }
 
-    void getCount(void){
-        // cout<<id; // throws an error
-        cout<<"The value of count is "<<hello<<endl;
-    }
+        // Below line means that non member - sumComplex funtion is allowed to do anything with my private parts (members)
+        void printNumber(){
+            cout<<"Your number is "<<a<<" + "<<b<<"i"<<endl;
+        }
 };
 
-// Count is the static data member of class Employee
-//int Employee::count; // Default value is 0
+Complex sumComplex(Complex o1, Complex o2){
+    Complex o3;
+    o3.setNumber((o1.a + o2.a), (o1.b+o2.b))
+    ;
+    return o3;
+}
 
-int main()
-{
-    Employee harry, rohan, lovish;
-    // harry.id = 1;
-    // harry.count=1; // cannot do this as id and count are private
+int main(){
+    Complex c1, c2, sum;
+    c1.setNumber(1, 4);
+    c1.printNumber();
 
-    harry.setData();
-    harry.getData();
+    c2.setNumber(5, 8);
+    c2.printNumber();
 
-    rohan.setData();
-    rohan.getData();
-
-    lovish.setData();
-    lovish.getData();
-    
+    sum = sumComplex(c1, c2);
+    sum.printNumber();
 
     return 0;
 }
+
+/* Properties of friend functions
+1. Not in the scope of class
+2. since it is not in the scope of the class, it cannot be called from the object of that class. c1.sumComplex() == Invalid
+3. Can be invoked without the help of any object
+4. Usually contans the objects as arguments
+5. Can be declared inside public or private section of the class
+6. It cannot access the members directly by their names and need object_name.member_name to access any member.
+
+*/

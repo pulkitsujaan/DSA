@@ -45,7 +45,6 @@ float cgpa :: calculate_sgpa()
     sgpa = ((4 * multiplier[0]) + (4 * multiplier[1]) + (3 * multiplier[2]) + (2 * multiplier[3]) + (1 * multiplier[4])) / 14;
     return sgpa;
 }
-using namespace std;
 int main()
 {
     cgpa student;
