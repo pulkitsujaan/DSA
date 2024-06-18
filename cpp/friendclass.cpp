@@ -5,9 +5,9 @@ class complex
 {
 private:
     int a, b;
+    friend void calculator :: realsum(complex z1, complex z2);
 
 public:
-    friend void calculator :: realsum(complex z1, complex z2);
 
     void setdata(int a1, int b1)
     {
