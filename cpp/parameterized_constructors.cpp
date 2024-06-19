@@ -12,8 +12,8 @@ class parameter
 };
 int main() {
     
-    parameter two;
-    parameter(4,5);//parameterized constructors
+    parameter(4,5);
+    parameter two(4,5);//parameterized constructors
     
     return 0;
 }
