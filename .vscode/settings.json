@@ -5,6 +5,8 @@
         "*.tcc": "cpp",
         "random": "cpp",
         "valarray": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "fstream": "cpp",
+        "type_traits": "cpp"
     }
 }
