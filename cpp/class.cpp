@@ -4,7 +4,6 @@ class hello
 {
 private:
    int a, b, c;
-
 public:
    int d, e;
    void setData(int a, int b, int c);
