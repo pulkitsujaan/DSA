@@ -7,6 +7,7 @@
         "valarray": "cpp",
         "complex": "cpp",
         "fstream": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "cmath": "cpp"
     }
 }
