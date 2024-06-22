@@ -8,10 +8,10 @@ class X
       int x,y;
    public: 
      friend void distance(X a,Y b);
-   //   void setdata(int a,int b){
-   //       x=a;
-   //       y=b;
-   //   }
+      void setdata(int a,int b){
+         x=a;
+         y=b;
+     }
      void display(int x, int y)
      {
          cout<<"point = ( "<<x<<","<<y<<")";
@@ -23,10 +23,10 @@ class Y
       int x,y;
    public: 
      friend void distance(X a,Y b);
-   //   void setdata(int a,int b){
-   //       x=a;
-   //       y=b;
-   //   }
+     void setdata(int a,int b){
+         x=a;
+          y=b;
+      }
      void display(int x, int y)
      {
          cout<<"point = ( "<<x<<","<<y<<")";
@@ -40,10 +40,19 @@ void distance(X a,Y b)
 }
 int main()
 {
+    int x,y;
    X a;
    Y b;
    cout<<"Enter the x coordinate of point A: ";
-   cin>>a.x;
+   cin>>x;
    cout<<"Enter the y coordinate of point A: ";
+   cin>>y;
+   a.setdata(x,y);
+   cout<<"Enter the x coordinate of point B: ";
+   cin>>x;
+   cout<<"Enter the y coordinate of point B: ";
+   cin>>y;
+   b.setdata(x,y);
+   distance (a,b);
    return 0;
 }
